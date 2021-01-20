@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+    /* 5.  Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от 
+переданного значения операции (использовать switch) выполнить одну из арифметических операций 
+(использовать функции из задания 4) и вернуть полученное значение.   */
+         
+         let arg1, arg2, operation;
+         let a,b;
+         function mathOperation(arg1, arg2, operation){
+             switch (operation){
+                 case "plus":
+                plus (arg1, arg2);
+                 return;
+                     
+               case "min":
+              min (arg1, arg2); 
+               return;
+                     
+                  case "division":
+                 division (arg1, arg2);            
+                  return ;
+                     
+                   case "mult":
+                  mult (arg1, arg2);   
+                   return;
+                     
+                   default:
+                     throw new Error ("Операция " + operation + " не предусмотрена. Ваш диск будет отформатирован...");
+                     
+             }
+         }
+                  
+        
+         function plus (a,b){
+             let sum = a + b;
+             return (console.log(sum))
+         };
+         function min (a,b){
+             let min = a - b;
+             return(console.log(min))
+         }
+          function division (a,b){
+             let div = a / b;
+             return (console.log(div))
+         };
+         function mult (a,b){
+             let mul = a * b;
+             return(console.log(mul))
+         }
+         
+     mathOperation (5, 5, "mult");
+     mathOperation (5, 5, "plus");
+     mathOperation (5, 5, "min");
+     mathOperation (5, 5, "division");
+     mathOperation (5, 5, "lorem"); 
+    </script>
+   
+   
+   
+   
+    
+</body>
+</html>
+
+
+
+
+
+
