@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>i-Store</title>
+</head>
+<body>
+   <script>
+       /*
+       Продолжить работу с интернет-магазином:
+В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+Реализуйте такие объекты.
+Перенести функционал подсчета корзины на объектно-ориентированную базу.
+*/
+    const basket = {
+  sum: 0, // свойство, чтоб было к чему обращаться
+  goods: {}, // свойство, где будут лежать товары
+  sumBasket: function () {
+    let sum = 0;
+    for (var key in this.goods) {
+      const elem = this.goods[key]; // получаем товар по ключу
+      sum += elem.count * elem.price;
+    }
+    this.sum = sum; // запись свойста
+    return sum;
+  }
+};
+
+const tv = {
+  price: 500,
+  count: 2
+};
+
+const telefone = {
+  price: 350,
+  count: 1
+};
+
+const tablet = {
+  price: 250,
+  count: 3
+};
+
+basket.goods = { tv, telefone, tablet };
+
+basket.sumBasket();
+
+console.log(basket.sum);
+console.log(basket);
+    
+    </script>
+    
+</body>
+</html>
