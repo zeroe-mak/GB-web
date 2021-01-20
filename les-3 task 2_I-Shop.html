@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       
+const basketItems = ['Телевизор', 'Телефон', 'Планшет'];// то, что лежит в корзине. массив
+const ItemsCost = [['Телевизор', 500], ['Телефон', 350], ['Планшет', 250]]; // юниты и их цены
+   
+ let GetItemsCostArr = []; //отдельный массив с ценами товаров
+             
+ function getCosts(){             //получаем отдельный массив с ценами товаров
+ for (let i = 0; i < ItemsCost.length; i++){
+      GetItemsCostArr.push(ItemsCost[i][1]);
+           }
+      }      
+       
+getCosts(ItemsCost);
+       
+      let basketSum = 0;
+       function countBasketPrice(){
+           for (let i = 0; i < GetItemsCostArr.length; i++){
+      basketSum = basketSum + GetItemsCostArr[i];
+           }
+           return(basketSum)
+       }
+     
+console.log('Массив корзины: ' + basketItems);
+console.log('Массив стоимости каждого товара: ' + ItemsCost);
+console.log('Полная стоимость корзины: ' + countBasketPrice(GetItemsCostArr));
+   
+   </script> 
+</body>
+</html>

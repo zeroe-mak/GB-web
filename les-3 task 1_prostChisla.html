@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let draftArr = [];
+       let i = 1;
+       while (i <= 100){
+           
+           draftArr.push(i);
+           ++i;
+       }
+        a = 2; // удаляем элементы массива, кратные двум
+        i = 2;
+       while (i <= 100){
+           i=i+a;
+           draftArr.splice(draftArr.indexOf(i),1);
+       }
+       
+       i = 4; 
+        b = 3;
+        while (i < 100){
+            if (i % b ===0 && draftArr.indexOf(i) !== -1){   
+                draftArr.splice(draftArr.indexOf(i), 1);
+            }else {
+                i++;
+            }
+        }
+
+        i = 6; 
+        b = 5;
+        while (i < 100) {
+            if (i % b === 0 && draftArr.indexOf(i) !== -1) {
+                draftArr.splice(draftArr.indexOf(i), 1);
+            } else {
+                i++;
+            }
+        }
+
+        i = 8; 
+        b = 7;
+        while (i < 100) {
+            if (i % b === 0 && draftArr.indexOf(i) !== -1) {
+                draftArr.splice(draftArr.indexOf(i), 1);
+            } else {
+                i++;
+            }
+        }
+
+       console.log(draftArr);
+    
+    
+    </script> 
+</body>
+</html>
+
